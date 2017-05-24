@@ -1,7 +1,7 @@
 # Domain
 
 ## Commander
-Using the Domain Commander commands implementation
+Using the Domain Commander command implementation
 
  Commands
  --------

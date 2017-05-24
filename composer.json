@@ -1,6 +1,6 @@
 {
     "name": "domain/commander",
-    "description": "",
+    "description": "Using the Domain Commander command implementation",
     "authors": [
         {
             "name": "Biyi Akinpelu",
