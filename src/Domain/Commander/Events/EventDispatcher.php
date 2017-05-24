@@ -5,7 +5,8 @@ namespace Domain\Commander\Events;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Log\Writer;
 
-class EventDispatcher {
+class EventDispatcher
+{
 
     /**
      * @var Dispatcher
@@ -16,7 +17,7 @@ class EventDispatcher {
      */
     private $log;
 
-    function __construct(Dispatcher $event, Writer $log)
+    public function __construct(Dispatcher $event, Writer $log)
     {
         $this->event = $event;
         $this->log = $log;
@@ -31,7 +32,6 @@ class EventDispatcher {
 
             $this->log->info("$eventName was fired.");
         }
-
     }
 
     /**
@@ -42,4 +42,4 @@ class EventDispatcher {
     {
         return str_replace('\\', '.', get_class($event));
     }
-} 
+}

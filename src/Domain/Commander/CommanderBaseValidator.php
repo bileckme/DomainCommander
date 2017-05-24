@@ -1,5 +1,7 @@
 <?php namespace Domain\Commander;
+
 use Illuminate\Validation\Factory as Validator;
+
 class CommanderBaseValidator
 {
     /**
@@ -10,5 +12,4 @@ class CommanderBaseValidator
     {
         $this->validator = $validator;
     }
-
 }

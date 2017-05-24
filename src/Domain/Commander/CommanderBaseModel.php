@@ -1,6 +1,8 @@
 <?php namespace Domain\Commander;
+
 use Domain\Commander\Events\EventGenerator;
 use Watson\Validating\ValidatingTrait;
+
 /**
  * Class CommanderBaseController
  * @package Domain\Commander

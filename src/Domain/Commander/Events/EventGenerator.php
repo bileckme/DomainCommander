@@ -1,6 +1,8 @@
 <?php
 namespace Domain\Commander\Events;
-trait EventGenerator {
+
+trait EventGenerator
+{
     protected $pendingEvents = [];
     public function raise($event)
     {

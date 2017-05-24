@@ -4,8 +4,8 @@ namespace Domain\Commander\Events;
 
 use ReflectionClass;
 
-class EventListener {
-
+class EventListener
+{
     public function handle($event)
     {
         $eventName = $this->getEventName($event);

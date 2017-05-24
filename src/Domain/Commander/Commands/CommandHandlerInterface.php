@@ -1,4 +1,5 @@
 <?php namespace Domain\Commander\Commands;
+
 /**
  * Interface CommandHandler
  * @package Domain\Commander\Commands

@@ -1,5 +1,7 @@
 <?php namespace Domain\Commander;
+
 use Domain\Commander\Commands\CommandBus;
+
 /**
  * Class CommanderBaseController
  * @package Domain\Commander

@@ -10,7 +10,7 @@ class BaseCommandBus implements CommandBus
      * @param Application       $app
      * @param CommandTranslator $commandTranslator
      */
-    function __construct(Application $app, CommandTranslator $commandTranslator)
+    public function __construct(Application $app, CommandTranslator $commandTranslator)
     {
         $this->app = $app;
         $this->commandTranslator = $commandTranslator;
@@ -20,4 +20,4 @@ class BaseCommandBus implements CommandBus
         $handler = $this->commandTranslator->toCommandHandler($command);
         return $this->app->make($handler)->handle($command);
     }
-} 
+}
