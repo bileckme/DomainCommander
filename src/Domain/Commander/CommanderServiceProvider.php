@@ -1,6 +1,4 @@
-<?php
-
-namespace Domain\Commander;
+<?php namespace Domain\Commander;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,16 +12,25 @@ class CommanderServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
+	 * Bootstrap the application events.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->package('domain/commander');
+	}
+
+	/**
 	 * Register the service provider.
 	 *
 	 * @return void
 	 */
 	public function register()
 	{
-        $this->registerCommandTranslator();
-
-        $this->registerCommandBus();
-    }
+    $this->registerCommandTranslator();
+    $this->registerCommandBus();
+	}
 
 	/**
 	 * Get the services provided by the provider.
@@ -32,19 +39,25 @@ class CommanderServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return ['commander'];
+    return ['commander'];
 	}
 
-    protected function registerCommandTranslator()
-    {
-        $this->app->bind('Domain\Commander\CommandTranslator', 'Domain\Commander\BasicCommandTranslator');
-    }
+  /**
+   * Registers the Command Translator
+   */
+  protected function registerCommandTranslator()
+  {
+    $this->app->bind('Domain\Commander\CommandTranslator', 'Domain\Commander\BasicCommandTranslator');
+  }
 
-    protected function registerCommandBus()
-    {
-        $this->app->bindShared('Domain\Commander\CommandBus', function () {
-            return $this->app->make('Domain\Commander\ValidationCommandBus');
-        });
-    }
+  /**
+   * Registers the Command Bus
+   */
+  protected function registerCommandBus()
+  {
+    $this->app->bindShared('Domain\Commander\CommandBus', function () {
+      return $this->app->make('Domain\Commander\ValidationCommandBus');
+    });
+  }
 
 }

@@ -1,0 +1,23 @@
+{
+    "name": "domain/commander",
+    "description": "",
+    "authors": [
+        {
+            "name": "Biyi Akinpelu",
+            "email": "bileckme@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-0": {
+            "Domain\\Commander\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
