@@ -1,4 +1,4 @@
-# Domain
+# Domain Commander
 
 ## Commander
 Using the Domain Commander command implementation
