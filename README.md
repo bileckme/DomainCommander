@@ -1,4 +1,4 @@
-# Domain Commander
+# Laravel Domain Commander
 
 ## Commander
 Using the Domain Commander command implementation
