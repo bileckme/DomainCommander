@@ -1,4 +1,4 @@
-# Laravel Domain Commander
+# Domain Commander
 
 ## Commander
 Using the Domain Commander command implementation
@@ -18,4 +18,4 @@ Using the Domain Commander command implementation
  
 ### Credits
 
- - Biyi Akinpelu (Laravel Developer)
+ - Biyi Akinpelu (Developer)
