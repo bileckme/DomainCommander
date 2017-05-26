@@ -1,7 +1,7 @@
 # Domain Commander
 
 ## Commander
-Using the Domain Commander command implementation
+Using the Domain Commander to illustrate the command pattern implementation
 
  Commands
  --------
