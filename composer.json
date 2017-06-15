@@ -1,6 +1,6 @@
 {
     "name": "domain/commander",
-    "description": "Using the Domain Commander command implementation",
+    "description": "Using the Domain Commander to illustrate the command pattern implementation",
     "authors": [
         {
             "name": "Biyi Akinpelu",
@@ -10,6 +10,11 @@
     "require": {
         "php": ">=5.4.0",
         "illuminate/support": "4.2.*"
+    },
+    "require-dev": {
+        "mockery/mockery": "0.9.2",
+        "phpspec/phpspec": "~2.0",
+        "codeception/codeception": "2.1.5"
     },
     "autoload": {
         "classmap": [

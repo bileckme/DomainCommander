@@ -23,6 +23,11 @@ class ValidationCommandBus implements CommandBus
         $this->defaultCommandBus = $defaultCommandBus;
     }
 
+    /**
+     * Executes a command
+     * @param $command
+     * @return mixed
+     */
     public function execute($command)
     {
         $validator = $this->commandTranslator->toValidator($command);

@@ -4,8 +4,16 @@ use Illuminate\Foundation\Application;
 
 class BaseCommandBus implements CommandBus
 {
+    /**
+     * @var Application
+     */
     private $app;
+
+    /**
+     * @var CommandTranslator
+     */
     protected $commandTranslator;
+
     /**
      * @param Application       $app
      * @param CommandTranslator $commandTranslator
@@ -15,6 +23,12 @@ class BaseCommandBus implements CommandBus
         $this->app = $app;
         $this->commandTranslator = $commandTranslator;
     }
+
+    /**
+     * Executes a command
+     * @param $command
+     * @return mixed
+     */
     public function execute($command)
     {
         $handler = $this->commandTranslator->toCommandHandler($command);

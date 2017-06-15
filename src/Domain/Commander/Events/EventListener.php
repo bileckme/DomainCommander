@@ -1,5 +1,4 @@
 <?php
-
 namespace Domain\Commander\Events;
 
 use ReflectionClass;

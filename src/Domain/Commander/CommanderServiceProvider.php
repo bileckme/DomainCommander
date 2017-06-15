@@ -48,7 +48,8 @@ class CommanderServiceProvider extends ServiceProvider
    */
   protected function registerCommandTranslator()
   {
-      $this->app->bind('Domain\Commander\CommandTranslator', 'Domain\Commander\BasicCommandTranslator');
+      $this->app->bind('Domain\Commander\Commands\CommandTranslator',
+                       'Domain\Commander\Commands\BaseCommandTranslator');
   }
 
   /**
@@ -56,8 +57,8 @@ class CommanderServiceProvider extends ServiceProvider
    */
   protected function registerCommandBus()
   {
-      $this->app->bindShared('Domain\Commander\CommandBus', function () {
-          return $this->app->make('Domain\Commander\ValidationCommandBus');
+      $this->app->bindShared('Domain\Commander\Commands\CommandBus', function () {
+          return $this->app->make('Domain\Commander\Commands\ValidationCommandBus');
       });
   }
 }
